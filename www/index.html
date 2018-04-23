@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+   
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>Consultorio dental</title>
+    <link rel="stylesheet" href="css/jquery.mobile.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/inputs.css">
+   
+</head>
+
+<body>
+<div id="logo"><img src="img/logo_perlas.png" alt="logotipo" id="imagen"></div>
+<!-- ############################## -->
+<!-- Vista Inicio -->
+<!-- ############################## -->
+   <div data-role="page" id="page_one">
+       <div class="centre">
+        <a href="#agendar" id="ini" data-transition="pop">Agendar cita</a>
+        <a href="#cancelar" id="ini" data-transition="pop">Cancelar cita</a>
+        </div> 
+   </div>
+        
+<!-- ############################## -->
+<!-- Vista Agendar -->
+<!-- ############################## -->
+      
+   <div data-role="page" id="agendar">
+      <div class="centrar2">
+      <p id="titulo">Agendar</p>
+      <a href="#" id="ini">Llamar</a>
+      <p class="recom" id="recomendation">O puedes hacerlo ingresando tus datos</p>
+      <form>
+          <input type="text" placeholder="Paciente" id="theName" name="theName">
+          <input name="password" type="password" placeholder="Contraseña" id="password">
+          <button id="callAjax" type="button">Enviar</button>
+      </form>
+      </div>
+      <a href="#" data-rel="back" class="back regreso" data-transition="pop"><span class="icon-undo2"></span></a> 
+   </div>
+      
+<!-- ############################## -->
+<!-- Elegir fecha -->
+<!-- ############################## -->
+   <div data-role="page" id="fecha">
+      <div class="centre3">
+      <p id="titulo">Agenda tu cita</p>
+      <form>
+          <input type="date" name="bday" id="fecha2">
+          <input  type="time" id="hora" name="hora">
+      </form>
+      </div>
+      <button id="agendar" type="button" onclick="agendar()">Agendar</button>
+    <a href="#" data-rel="back" class="back" data-transition="pop"><span class="icon-undo2"></span></a>  
+   </div>
+       
+<!-- ############################## -->
+<!-- resultlado agenda completa -->
+<!-- ############################## -->
+   <div data-role="page" id="respuesta">
+      <div id="espacio"></div>
+      <div id="solucion">
+      <p id="titulo">Tu cita ha sido registrada</p>
+      <p id="confirmacion"></p>
+      <div id="recomendatio"></div>
+      </div>
+      <a href="#page_one" id="ini" data-transition="pop">Inicio</a>
+   </div>
+
+<!-- ############################## -->
+<!-- Vista Cancelar la cita-->
+<!-- ############################## -->
+   <div data-role="page" id="cancelar">
+      <div id="espacio"></div>
+      <p id="titulo">Cancelar</p>
+      <a href="#" id="ini">Llamar</a>
+      <p class="recom">O puedes hacerlo ingresando tus datos</p>
+      <form>
+          <input type="text" placeholder="Paciente" id="pacienteC">
+          <input type="password" placeholder="Contraseña" id="passwordC">
+      </form>
+          <button type="button" id="citaCancelar" onclick="cancelar()">Enviar</button>
+          <a href="#" data-rel="back" class="back"><span class="icon-undo2"></span></a> 
+   </div>
+<!-- ############################## -->
+<!-- resultlado agenda cancelar -->
+<!-- ############################## -->
+   <div data-role="page" id="cancelarR"> 
+      <div id="espacio"></div>
+      <div id="solucion">
+      <p id="titulo">Tu cita ha sido cancelada</p>
+      <p id="confirmacion2">Has cancelado</p>
+      </div>
+      <a href="#page_one" id="ini" data-transition="pop">Inicio</a>
+   </div>     
+    <!-- Scripts necesarios -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+    <script src="js/registro.js"></script>
+    <script src="js/agendar.js"></script>
+    <script src="js/cancelar.js"></script>
+    <script src="js/storage"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
+      
+      
+      
+      
+
+       
+
+
+
+
+
+
+   
+    
+
+       
+     
+      
+      
+       
+     
+
+
+      
+     
+       
+      
+      
+   
+  
+       
+     
+
+        
+       
+        
+       
+
+
+
+
+
+     
+      
+    
